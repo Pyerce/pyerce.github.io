@@ -4,8 +4,14 @@
 
 struct ContentView: View {
      var body: some View {
-        Text("I'm an iOS Developer!").padding().frame(width:100, height: 100)
-            .background(Color(red: 0, green: 2, blue: 1))
+        Text("I'm an iOS Developer!")
+          .padding()
+          .background(Color.red)
+          .padding()
+          .background(Color.blue)
+          .padding()
+          .padding()
+          .background(Color.green)
     }
 }
 
