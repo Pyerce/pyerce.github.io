@@ -1,12 +1,13 @@
-//
-//  AppDelegate.swift
-//  GuessTheFlag
-//
-//  Created by Pierce Findlay on 2/10/20.
-//  Copyright © 2020 Pierce Findlay. All rights reserved.
-//
+/*
+Pierce Findlay
+CPSC411
+App Project
+CSUFChat App
+*/
 
 import UIKit
+import Firebase
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        let db = Firestore.firestore()
+        
+        print(db)
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true 
+        
         return true
     }
 
